@@ -62,7 +62,7 @@ webServers=(  'apache' )
 # webServers=(  'apache' 'nginx' )
 
 # All PHP versions:
-phpVersions=( 'php5' 'php7' 'php73' )
+phpVersions=( 'php5' 'php7' 'php73' 'php74' )
 # phpVersions=( 'php5' 'php7' 'php73' )
 
 # PHP support for each ojs version:
@@ -168,6 +168,11 @@ php73=( 'main'  \
 		'3_2_0-1' \
 		'3_2_0-0' )
 
+php74=( '3_3_0-13' \
+				'3_3_0-12' \
+				'3_3_0-11' \
+				'3_3_0-10' )
+
 printf "\n\nBUILDING OJS OFFICIAL DOCKER STACKS\n"
 printf "===================================\n\n"
 
@@ -197,7 +202,10 @@ for ojs in "${ojsVersions[@]}"; do
 						[[ " ${php72[@]} " =~ " ${ojs} " ]] && build=1
 					;;
 					php73 )
-					        [[ " ${php73[@]} " =~ " ${ojs} " ]] && build=1
+					  [[ " ${php73[@]} " =~ " ${ojs} " ]] && build=1
+					;;
+					php74 )
+					  [[ " ${php74[@]} " =~ " ${ojs} " ]] && build=1
 					;;
 				esac
 
