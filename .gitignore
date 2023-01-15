@@ -1,2 +1,6 @@
 .swp
 .sandbox
+/versions/3_3_0-13/alpine/apache/php74/volumes/db/*
+/versions/3_3_0-13/alpine/apache/php74/volumes/private/*
+/versions/3_3_0-13/alpine/apache/php74/volumes/public/*
+/versions/3_3_0-13/alpine/apache/php74/volumes/logs/*
